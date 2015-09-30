@@ -10,7 +10,7 @@ public interface NameServerInterface extends Serializable, Remote {
 
     public void createGroup(String groupName, ComModuleImp leader) throws RemoteException;
 
-    public ComModuleImp joinGroup(String groupName, ComModuleImp m) throws RemoteException;
+    public ComModuleImp joinGroup(String groupName) throws RemoteException;
 
     public String[] groupList() throws RemoteException;
 
