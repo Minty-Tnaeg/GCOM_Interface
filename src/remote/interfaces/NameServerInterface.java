@@ -8,12 +8,12 @@ import java.rmi.RemoteException;
 
 public interface NameServerInterface extends Serializable, Remote {
 
-    public void createGroup(String groupName, ComModuleImp leader) throws RemoteException;
+    public void createGroup(String groupName, ComModuleInterface leader) throws RemoteException;
 
-    public ComModuleImp joinGroup(String groupName) throws RemoteException;
+    public ComModuleInterface joinGroup(String groupName) throws RemoteException;
 
     public String[] groupList() throws RemoteException;
 
-    public void assignNewLeader(String groupName, ComModuleImp newLeader) throws RemoteException;
+    public void assignNewLeader(String groupName, ComModuleInterface newLeader) throws RemoteException;
 
 }
