@@ -1,15 +1,17 @@
 package remote.interfaces;
 
+import remote.objects.ComModuleImp;
+
 import java.io.Serializable;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
-public interface NameServerInterface extends Serializable, Remote {
+public interface NameServerInterface<T extends ComModuleInterface> extends Serializable, Remote {
 
-    public ComModuleInterface joinGroup(String groupName, ComModuleInterface leader) throws RemoteException;
+    T joinGroup(String groupName, T leader) throws RemoteException;
 
-    public String[][] groupList() throws RemoteException;
+    String[][] groupList() throws RemoteException;
 
-    public void assignNewLeader(String groupName, ComModuleInterface newLeader) throws RemoteException;
+    void assignNewLeader(String groupName, T leader) throws RemoteException;
 
 }
