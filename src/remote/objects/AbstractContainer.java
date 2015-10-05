@@ -1,6 +1,5 @@
 package remote.objects;
 
-import javax.swing.*;
 import java.util.HashMap;
 import java.util.UUID;
 
