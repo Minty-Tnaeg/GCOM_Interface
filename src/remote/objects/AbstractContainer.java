@@ -1,12 +1,13 @@
 package remote.objects;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.UUID;
 
 /**
  * Created by c12slm on 2015-10-05.
  */
-public abstract class AbstractContainer {
+public abstract class AbstractContainer implements Serializable {
     private AbstractMessage message;
 
     public AbstractContainer(AbstractMessage message) {
