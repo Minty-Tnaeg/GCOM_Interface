@@ -9,4 +9,5 @@ import java.rmi.RemoteException;
  */
 public interface ComModuleInterface extends Remote, Serializable {
     void receiveMessage(String m) throws RemoteException;
+    String getNickName() throws RemoteException;
 }

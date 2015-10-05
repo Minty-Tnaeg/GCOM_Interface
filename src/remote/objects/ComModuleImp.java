@@ -10,15 +10,21 @@ import java.rmi.RemoteException;
  */
 public class ComModuleImp implements ComModuleInterface {
     String message;
+    String nickName;
 
-    public ComModuleImp() {
-        message = "HEJ";
+    public ComModuleImp(String nickName) {
+        this.nickName = nickName;
     }
 
     @Override
     public void receiveMessage(String m) throws RemoteException {
         this.message = new String(m);
         System.err.println("Message received "  + this.message);
+    }
+
+    @Override
+    public String getNickName() throws RemoteException {
+        return nickName;
     }
 
     public void sendMessage(String m, ComModuleInterface target) throws IOException {
