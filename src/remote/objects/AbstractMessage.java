@@ -12,5 +12,5 @@ public abstract class AbstractMessage {
         return this.code;
     }
 
-    abstract void method(int i);
+    abstract public void method(int i);
 }
