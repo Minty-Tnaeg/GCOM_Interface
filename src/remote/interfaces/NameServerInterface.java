@@ -1,7 +1,5 @@
 package remote.interfaces;
 
-import remote.objects.ComModuleImp;
-
 import java.io.Serializable;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
