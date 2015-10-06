@@ -9,16 +9,22 @@ import java.util.UUID;
  */
 public abstract class AbstractContainer implements Serializable {
     private AbstractMessage message;
+    private UUID pid;
 
-    public AbstractContainer(AbstractMessage message) {
+    public AbstractContainer(AbstractMessage message, UUID pid) {
         this.message = message;
+        this.pid = pid;
     }
 
     public AbstractMessage getMessage(){
         return this.message;
     }
 
-    abstract public boolean isDeliverable(HashMap<UUID, Integer> vectorClock);
+    public UUID getPid(){
+        return this.pid;
+    }
 
-    abstract public boolean isRepeat(HashMap<UUID, Integer> vectorClock);
+    abstract public boolean isDeliverable(HashMap<UUID, Integer> vectorClock, UUID pid);
+
+    abstract public boolean isRepeat(HashMap<UUID, Integer> vectorClock, UUID pid);
 }
