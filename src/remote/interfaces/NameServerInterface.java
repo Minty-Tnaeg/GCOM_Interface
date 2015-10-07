@@ -10,6 +10,6 @@ public interface NameServerInterface<T extends ComModuleInterface> extends Seria
 
     String[][] groupList() throws RemoteException;
 
-    void assignNewLeader(String groupName, T leader) throws RemoteException;
+    T assignNewLeader(String groupName, T leader) throws RemoteException;
 
 }

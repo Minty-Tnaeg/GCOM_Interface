@@ -14,4 +14,6 @@ public interface ComModuleInterface extends Remote, Serializable {
     void receiveMessage(AbstractContainer m) throws RemoteException;
 
     String getNickName() throws RemoteException;
+
+    long ping() throws RemoteException;
 }
