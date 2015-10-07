@@ -24,6 +24,11 @@ public abstract class AbstractContainer implements Serializable {
         return this.pid;
     }
 
+    @Override
+    public String toString(){
+        return "[No vector]";
+    }
+
     abstract public boolean isDeliverable(HashMap<UUID, Integer> vectorClock, UUID pid);
 
     abstract public boolean isRepeat(HashMap<UUID, Integer> vectorClock, UUID pid);
