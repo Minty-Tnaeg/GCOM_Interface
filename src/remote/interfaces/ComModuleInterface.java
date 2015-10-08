@@ -17,3 +17,4 @@ public interface ComModuleInterface extends Remote, Serializable {
 
     long ping() throws RemoteException;
 }
+
